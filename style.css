@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(61, 94, 61);
+}
+
+.nav-main {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+} 
+
+/* Menu */
+
+.nav-main:hover .sideMenu {
+    display: block;
+}
+
+.hamburgerIcon:hover {
+    background-color: #987253;;
+}  
+   
+.hamburgerIcon {
+    width: 60px;
+    background-image: url("/hamburgerMenu.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    cursor: pointer;
+    background-color: #f98f39;
+}
+
+.sideMenu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 272px;
+
+    z-index: 1000;
+    color: white;
+}
+
+
+.sideMenu:hover .hamburgerIcon {
+    display: block;
+    
+    transition-timing-function: ease-in;
+}
+
+/* button styling */
+
+.sideMenu span {
+    padding: 0 10px;
+}
+
+.sideMenu.toggleBtn {
+    line-height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.radioBtns {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radioBtns input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radioBtns label {
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+}
+
+.btn {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.btnGreen {
+    background: rgb(61, 94, 61);  
+}
+
+.btnYellow {
+    background: rgb(191, 183, 35);
+}
+
+.btnRed {
+    background: rgb(186, 48, 48);
+}
+
+.btnPurple {
+    background: rgb(111, 55, 94);
+}
+
+.btnPink {
+    background: rgb(230, 89, 89);
+}
