@@ -1,4 +1,4 @@
-// togglebutton
+// toggleButton
 
 const toggleClass = function() {
   let menu = document.getElementsByClassName(".sideMenu");
@@ -17,7 +17,7 @@ let hamburger = document.querySelector(".hamburgerIcon");
 
 hamburger.addEventListener("click", toggleClass);
 
-// change backgroundcolor with eventlistener
+// change backgroundcolor eventlistener
 
 let btns = document.getElementsByClassName("btn");
   
