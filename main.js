@@ -1,37 +1,27 @@
-// toggleButton
+const toggle = document.getElementById("hamburgerIcon");
 
-const toggleClass = function() {
-  let menu = document.getElementsByClassName(".sideMenu");
-  
-  // Menu is closed if it doesn't have the ".opened" class
-  // let menuIsClosed = !menu.classList.contains("opened") 
+const sidebar = document.getElementById("sidebar");
 
-  // if (menuIsClosed) {
-  //   menu.classList.add('opened');
-  // } else {
-  //   menu.classList.remove('opened');
-  // }
-}
+// open sidebar on hover
+toggle.addEventListener("mouseover", function () {
+  sidebar.style.left = "0px";
+});
 
-let hamburger = document.querySelector(".hamburgerIcon");
+// color toggle change background
+const btns = document.querySelectorAll("label");
 
-hamburger.addEventListener("click", toggleClass);
+btns.forEach((i) => {
+  i.addEventListener("click", function () {
+    let buttonStyle = getComputedStyle(this);
+    let ButtonBgColor = buttonStyle["backgroundColor"];
 
-// change backgroundcolor eventlistener
+    document.body.style.backgroundColor = ButtonBgColor;
+  });
+});
 
-let btns = document.getElementsByClassName("btn");
-  
-for (let i = 0; i < btns.length; i++) {
-    
-btns[i].addEventListener("click",function(){
-
-let buttonStyle = getComputedStyle(this);
-let ButtonBgColor = buttonStyle["backgroundColor"];
-    
-document.body.style.backgroundColor = ButtonBgColor; 
-    });
-}
-
-
-
-
+// hide sidebar after click
+btns.forEach((i) => {
+  i.addEventListener("click", function () {
+    sidebar.style.left = "-300px";
+  });
+});
