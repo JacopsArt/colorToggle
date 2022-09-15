@@ -7,7 +7,7 @@ toggle.addEventListener("mouseover", function () {
   sidebar.style.left = "0px";
 });
 
-// color toggle change background
+// color toggle change backgroundcolor
 const btns = document.querySelectorAll("label");
 
 btns.forEach((i) => {
